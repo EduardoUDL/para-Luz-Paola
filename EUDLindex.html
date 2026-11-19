@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Para Luz Paola — De Eduardo Díaz ✨</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Tipografías románticas de alta elegancia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --indigo-abyss: #050714;
+      --indigo-mid: #141238;
+      --violet-dusk: #2a184a;
+      --gold-luminous: #ffe08a;
+      --amber-core: #ff9d2e;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--indigo-abyss);
+      font-family: 'Lora', Georgia, serif;
+      color: #fff9ee;
+      user-select: none;
+    }
+
+    .font-script {
+      font-family: 'Alex Brush', cursive;
+    }
+
+    .font-display {
+      font-family: 'Cinzel', serif;
+    }
+
+    /* Resplandores cálidos */
+    .title-radiance {
+      text-shadow:
+        0 0 14px rgba(255, 224, 138, 0.78),
+        0 0 34px rgba(255, 157, 46, 0.48),
+        0 2px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .subtitle-glow {
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+    }
+
+    /* Paneles translúcidos de cristal nocturno */
+    .velvet-glass {
+      background: linear-gradient(155deg, rgba(22, 18, 54, 0.86) 0%, rgba(9, 10, 28, 0.94) 100%);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 220, 135, 0.34);
+      box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.75),
+        inset 0 0 28px rgba(255, 195, 95, 0.08);
+    }
+
+    /* Botones secundarios elegantes */
+    .btn-night {
+      background: linear-gradient(145deg, rgba(34, 26, 74, 0.72), rgba(14, 14, 38, 0.82));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 218, 130, 0.45);
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45), inset 0 0 12px rgba(255, 200, 95, 0.12);
+      transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .btn-night:hover, .btn-night:active {
+      border-color: #ffe8a3;
+      background: linear-gradient(145deg, rgba(56, 40, 110, 0.85), rgba(24, 20, 56, 0.9));
+      box-shadow: 0 0 24px rgba(255, 205, 100, 0.42);
+      transform: translateY(-2px);
+    }
+
+    /* Botón principal dorado "Cofre de luz" */
+    .btn-chest {
+      background: linear-gradient(135deg, #fff0b8 0%, #ffd06b 45%, #f59e0b 100%);
+      color: #241304;
+      border: 1px solid rgba(255, 250, 225, 0.85);
+      box-shadow:
+        0 0 24px rgba(255, 200, 90, 0.48),
+        0 8px 24px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      animation: gentleChestPulse 3.4s ease-in-out infinite;
+    }
+
+    .btn-chest:hover, .btn-chest:active {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow:
+        0 0 34px rgba(255, 224, 138, 0.8),
+        0 10px 28px rgba(0, 0, 0, 0.55);
+    }
+
+    @keyframes gentleChestPulse {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 200, 90, 0.42), 0 8px 22px rgba(0, 0, 0, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 34px rgba(255, 225, 130, 0.78), 0 8px 26px rgba(0, 0, 0, 0.55);
+      }
+    }
+
+    /* Modales suaves */
+    .modal-overlay {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      transform: translateY(22px) scale(0.95);
+      transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .modal-overlay.open .modal-card {
+      transform: translateY(0) scale(1);
+    }
+
+    /* Mensajes poéticos flotantes al soltar linternas */
+    @keyframes floatPoem {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 14px) scale(0.94);
+      }
+      14% {
+        opacity: 1;
+        transform: translate(-50%, 0px) scale(1);
+      }
+      82% {
+        opacity: 1;
+        transform: translate(-50%, -34px) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -56px) scale(0.97);
+      }
+    }
+
+    .poem-bubble {
+      position: fixed;
+      pointer-events: none;
+      z-index: 25;
+      animation: floatPoem 4.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    /* Scrollbar refinado para la carta */
+    .letter-scroll::-webkit-scrollbar {
+      width: 5px;
+    }
+    .letter-scroll::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 999px;
+    }
+    .letter-scroll::-webkit-scrollbar-thumb {
+      background: rgba(255, 215, 125, 0.38);
+      border-radius: 999px;
+    }
+  </style>
+</head>
+<body class="relative w-screen h-screen overflow-hidden">
+
+  <!-- Lienzo principal de alta calidad visual: Nebulosas, estrellas, montañas con niebla, lago con reflejos, barca iluminada y linternas con textura de papel -->
+  <canvas id="lanternCanvas" class="fixed inset-0 w-full h-full block z-0 cursor-pointer"></canvas>
+
+  <!-- Capa para mensajes poéticos flotantes -->
+  <div id="poemLayer" class="fixed inset-0 pointer-events-none z-20"></div>
+
+  <!-- Encabezado elegante: Para Luz Paola / De Eduardo Díaz + Control de melodía -->
+  <header class="fixed top-0 left-0 right-0 z-30 flex items-start justify-between px-4 sm:px-9 pt-4 sm:pt-7 pointer-events-none">
+    <div class="pointer-events-auto max-w-[76%]">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-amber-200/25 backdrop-blur-md mb-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-300 animate-pulse"></span>
+        <span class="font-display text-[11px] sm:text-xs tracking-[0.24em] uppercase text-amber-200/90">
+          De Eduardo Díaz
+        </span>
+      </div>
+      <h1 class="font-script text-5xl sm:text-7xl text-amber-100 title-radiance leading-none">
+        Para Luz Paola
+      </h1>
+      <p class="text-xs sm:text-sm md:text-base text-amber-100/85 italic subtitle-glow mt-1.5">
+        Toca el cielo para encender una linterna y elevar un pensamiento hacia ti ✨
+      </p>
+    </div>
+
+    <!-- Botón superior para activar o pausar melodía instrumental suave -->
+    <button id="melodyBtn"
+      type="button"
+      aria-label="Activar o pausar melodía instrumental"
+      class="pointer-events-auto btn-night rounded-full px-3.5 py-2.5 sm:px-4 sm:py-2.5 flex items-center gap-2 text-amber-100 text-xs sm:text-sm font-medium">
+      <span id="melodyIcon" class="text-base">🎶</span>
+      <span id="melodyText" class="hidden sm:inline font-display tracking-wider text-xs">Melodía</span>
+    </button>
+  </header>
+
+  <!-- Barra inferior de acciones interactivas -->
+  <footer class="fixed bottom-4 sm:bottom-7 left-0 right-0 z-30 px-3 sm:px-6 flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 pointer-events-none">
+    <!-- Botón 1: Soltar linterna -->
+    <button id="releaseBtn"
+      type="button"
+      class="pointer-events-auto btn-night rounded-full px-4 py-2.5 sm:px-5 sm:py-3 flex items-center gap-2 text-amber-100 text-xs sm:text-sm font-display tracking-wider">
+      <svg class="w-4 h-4 text-amber-300" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7 3h10l2.5 5.5v8.5L16.5 21h-9L4.5 17V8.5L7 3zm2.2 3.5v10h5.6v-10H9.2z"/>
+      </svg>
+      <span>Soltar linterna</span>
+    </button>
+
+    <!-- Botón 2: Cofre de luz (Carta dedicatoria) -->
+    <button id="chestBtn"
+      type="button"
+      class="pointer-events-auto btn-chest rounded-full px-5 py-2.5 sm:px-7 sm:py-3.5 flex items-center gap-2.5 text-xs sm:text-sm font-display font-bold tracking-wider">
+      <svg class="w-4 h-4 sm:w-5 sm:h-5 text-amber-950" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L9.5 8.5 3 11l6.5 2.5L12 20l2.5-6.5L21 11l-6.5-2.5L12 2z"/>
+      </svg>
+      <span>Cofre de luz</span>
+    </button>
+
+    <!-- Botón 3: Pedir un deseo -->
+    <button id="wishModalBtn"
+      type="button"
+      class="pointer-events-auto btn-night rounded-full px-4 py-2.5 sm:px-5 sm:py-3 flex items-center gap-2 text-amber-100 text-xs sm:text-sm font-display tracking-wider">
+      <span class="text-amber-300">✦</span>
+      <span>Pedir un deseo</span>
+    </button>
+  </footer>
+
+  <!-- MODAL 1: Cofre de luz (Carta dedicatoria íntima y sincera de Eduardo Díaz para Luz Paola) -->
+  <div id="chestModal" class="modal-overlay fixed inset-0 z-40 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+    <div class="modal-card velvet-glass relative w-full max-w-xl rounded-3xl p-6 sm:p-10 text-amber-50 max-h-[88vh] flex flex-col">
+      <!-- Botón cerrar -->
+      <button id="closeChestBtn"
+        type="button"
+        aria-label="Cerrar Cofre de luz"
+        class="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center text-amber-200/75 hover:text-white hover:bg-white/10 transition">
+        ✕
+      </button>
+
+      <!-- Ornamento superior -->
+      <div class="text-center mb-4">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-amber-400/15 border border-amber-300/40 mb-2 shadow-[0_0_24px_rgba(255,205,95,0.35)]">
+          <span class="text-2xl">🏮</span>
+        </div>
+        <p class="font-display text-[11px] uppercase tracking-[0.26em] text-amber-300/80">
+          Cofre de Luz
+        </p>
+        <h2 class="font-script text-4xl sm:text-5xl text-amber-100 title-radiance mt-0.5">
+          Mi querida Luz Paola
+        </h2>
+        <div class="w-28 h-px bg-gradient-to-r from-transparent via-amber-300/70 to-transparent mx-auto mt-2"></div>
+      </div>
+
+      <!-- Texto de la carta (sin fechas) -->
+      <div class="letter-scroll overflow-y-auto pr-2 space-y-4 text-base sm:text-lg leading-relaxed text-amber-50/95">
+        <p class="italic text-amber-200 text-lg sm:text-xl">
+          Luz Paola,
+        </p>
+        <p>
+          Hay personas que llegan sin hacer ruido y, de pronto, iluminan cada rincón que antes parecía común. Tú haces honor a tu nombre de una manera tan natural y hermosa que basta tu presencia para transformar cualquier instante en algo inolvidable.
+        </p>
+        <p>
+          Quise regalarte este cielo lleno de linternas porque cada vez que pienso en ti siento esa misma calidez: la certeza de haber encontrado una luz sincera, serena y capaz de guiarme incluso en medio de la noche más profunda.
+        </p>
+        <p>
+          Admiro tu esencia, la dulzura con la que miras el mundo y la paz que dejas en mí cada vez que compartimos tiempo juntos. Cada linterna que flota en esta pantalla lleva un deseo mío por verte sonreír, cumplir tus sueños y seguir escribiendo momentos hermosos a tu lado.
+        </p>
+        <p>
+          Gracias por iluminar mi vida simplemente siendo tú.
+        </p>
+      </div>
+
+      <!-- Firma de Eduardo Díaz -->
+      <div class="mt-6 pt-4 border-t border-amber-300/20 flex items-end justify-between">
+        <span class="text-xs italic text-amber-200/60">Bajo estas luces, siempre</span>
+        <div class="text-right">
+          <p class="text-xs sm:text-sm italic text-amber-200/85">Con todo mi cariño,</p>
+          <p class="font-script text-3xl sm:text-4xl text-amber-200 title-radiance leading-none mt-1">
+            Eduardo Díaz
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: Pedir un deseo (Linterna especial que permanece visible en el cielo) -->
+  <div id="wishModal" class="modal-overlay fixed inset-0 z-40 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm">
+    <div class="modal-card velvet-glass relative w-full max-w-md rounded-3xl p-6 sm:p-8 text-center">
+      <button id="closeWishModalBtn"
+        type="button"
+        aria-label="Cerrar ventana de deseo"
+        class="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center text-amber-200/75 hover:text-white hover:bg-white/10 transition">
+        ✕
+      </button>
+
+      <div class="mx-auto w-12 h-12 rounded-full bg-amber-400/15 border border-amber-300/45 flex items-center justify-center mb-2 text-2xl shadow-[0_0_24px_rgba(255,210,110,0.4)]">
+        ✨
+      </div>
+      <h3 class="font-script text-4xl sm:text-5xl text-amber-100 title-radiance">
+        Pide un deseo
+      </h3>
+      <p class="text-sm sm:text-base text-amber-100/80 mt-1 mb-5">
+        Escribe tu deseo, Luz Paola. Se elevará en una linterna dorada especial que permanecerá brillando en lo alto del cielo.
+      </p>
+
+      <form id="wishForm" class="space-y-4">
+        <textarea id="wishTextarea"
+          rows="3"
+          maxlength="90"
+          required
+          placeholder="Escribe aquí tu deseo..."
+          class="w-full rounded-2xl bg-white/10 border border-amber-300/40 px-4 py-3 text-amber-50 placeholder-amber-200/45 focus:outline-none focus:border-amber-200 focus:ring-2 focus:ring-amber-300/30 text-base resize-none"></textarea>
+
+        <button type="submit"
+          class="w-full btn-chest rounded-full py-3 px-6 font-display font-bold text-sm tracking-wider">
+          Elevar mi linterna especial ✨
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    /**
+     * =========================================================================
+     * MENSAJES POÉTICOS Y ROMÁNTICOS FLOTANTES (SIN FECHAS)
+     * =========================================================================
+     */
+    const POETIC_PHRASES = [
+      "Tu nombre ya es la luz más hermosa de mi cielo, Luz Paola ✨",
+      "Donde tú estás, incluso la noche aprende a brillar 🏮",
+      "Cada linterna lleva un deseo de verte siempre feliz 💛",
+      "Eres la calma y el destello más bonito en mi camino 🌙",
+      "Ni mil luces en el cielo igualan el brillo de tu sonrisa ✨",
+      "Contigo cualquier instante se vuelve eterno y mágico 💫",
+      "Mi lugar favorito siempre será donde pueda verte sonreír 🏮",
+      "Gracias por iluminar mis días con tu sola presencia 💛",
+      "Eres poesía hecha luz en medio de la noche 🌟",
+      "Para ti, Luz Paola, todas las luces de este cielo ✨"
+    ];
+
+    /**
+     * =========================================================================
+     * MELODÍA INSTRUMENTAL SUAVE (WEB AUDIO API - ARPA Y CELESTA NOCTURNA)
+     * =========================================================================
+     */
+    class NocturneMusicBox {
+      constructor() {
+        this.ctx = null;
+        this.isPlaying = false;
+        this.intervalId = null;
+        this.noteIndex = 0;
+        // Progresión arpegiada dulce y envolvente (Re mayor / Si menor / Sol mayor / La mayor)
+        this.sequence = [
+          293.66, 369.99, 440.00, 554.37, 587.33, 554.37, 440.00, 369.99, // Dmaj7
+          246.94, 293.66, 369.99, 440.00, 493.88, 440.00, 369.99, 293.66, // Bm7
+          196.00, 246.94, 293.66, 369.99, 440.00, 369.99, 293.66, 246.94, // Gmaj9
+          220.00, 277.18, 329.63, 440.00, 493.88, 440.00, 329.63, 277.18  // A6
+        ];
+      }
+
+      toggle() {
+        if (this.isPlaying) {
+          this.stop();
+        } else {
+          this.start();
+        }
+        return this.isPlaying;
+      }
+
+      start() {
+        try {
+          if (!this.ctx) {
+            const AudioCtx = window.AudioContext || window.webkitAudioContext;
+            this.ctx = new AudioCtx();
+          }
+          if (this.ctx.state === 'suspended') {
+            this.ctx.resume();
+          }
+          this.isPlaying = true;
+          this.playStep();
+          this.intervalId = setInterval(() => this.playStep(), 760);
+        } catch (err) {
+          console.warn('No se pudo iniciar el audio:', err);
+        }
+      }
+
+      stop() {
+        this.isPlaying = false;
+        if (this.intervalId) {
+          clearInterval(this.intervalId);
+          this.intervalId = null;
+        }
+      }
+
+      playStep() {
+        if (!this.isPlaying || !this.ctx) return;
+        const now = this.ctx.currentTime;
+        const freq = this.sequence[this.noteIndex % this.sequence.length];
+        this.noteIndex++;
+
+        const osc = this.ctx.createOscillator();
+        const harmonic = this.ctx.createOscillator();
+        const mainGain = this.ctx.createGain();
+        const harmGain = this.ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now);
+
+        harmonic.type = 'triangle';
+        harmonic.frequency.setValueAtTime(freq * 2, now);
+
+        mainGain.gain.setValueAtTime(0.0001, now);
+        mainGain.gain.exponentialRampToValueAtTime(0.05, now + 0.09);
+        mainGain.gain.exponentialRampToValueAtTime(0.0001, now + 2.8);
+
+        harmGain.gain.setValueAtTime(0.0001, now);
+        harmGain.gain.exponentialRampToValueAtTime(0.011, now + 0.06);
+        harmGain.gain.exponentialRampToValueAtTime(0.0001, now + 1.5);
+
+        osc.connect(mainGain);
+        harmonic.connect(harmGain);
+        mainGain.connect(this.ctx.destination);
+        harmGain.connect(this.ctx.destination);
+
+        osc.start(now);
+        harmonic.start(now);
+        osc.stop(now + 2.9);
+        harmonic.stop(now + 1.6);
+      }
+
+      playSparkleChime() {
+        if (!this.isPlaying || !this.ctx) return;
+        const now = this.ctx.currentTime;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(587.33, now);
+        osc.frequency.exponentialRampToValueAtTime(880.00, now + 0.32);
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(0.04, now + 0.04);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.3);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start(now);
+        osc.stop(now + 1.35);
+      }
+    }
+
+    const music = new NocturneMusicBox();
+
+    /**
+     * =========================================================================
+     * MOTOR GRÁFICO CANVAS: NEBULOSAS, ESTRELLAS, MONTAÑAS CON NIEBLA, LAGO,
+     * BARCA ILUMINADA Y LINTERNAS DE PAPEL CON TEXTURA Y PROFUNDIDAD
+     * =========================================================================
+     */
+    const canvas = document.getElementById('lanternCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let W = 0;
+    let H = 0;
+    let horizonY = 0;
+    let stars = [];
+    let ambientLanterns = [];
+    let persistentWishLanterns = []; // Deseos pedidos por Luz Paola que permanecen visibles en el cielo
+    let embers = [];
+    let shootingStars = [];
+    let phrasePointer = 0;
+
+    function resizeScene() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = window.innerWidth;
+      H = window.innerHeight;
+      canvas.width = W * dpr;
+      canvas.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      horizonY = H * 0.71;
+      createStars();
+    }
+
+    function createStars() {
+      const count = Math.min(220, Math.floor((W * H) / 5200));
+      stars = [];
+      for (let i = 0; i < count; i++) {
+        stars.push({
+          x: Math.random() * W,
+          y: Math.random() * (horizonY * 0.94),
+          radius: Math.random() * 1.5 + 0.35,
+          baseAlpha: Math.random() * 0.75 + 0.25,
+          speed: Math.random() * 0.025 + 0.007,
+          phase: Math.random() * Math.PI * 2,
+          hasCrossFlare: Math.random() < 0.14
+        });
+      }
+    }
+
+    /**
+     * Clase Lantern: Linterna de papel con costillas, degradado cálido interior,
+     * halo difuso y chispas ascendentes con efecto de profundidad.
+     */
+    class PaperLantern {
+      constructor(opts = {}) {
+        this.isPersistentWish = Boolean(opts.isPersistentWish);
+        this.wishText = opts.wishText || '';
+        this.targetY = opts.targetY || null;
+        this.reset(opts, true);
+      }
+
+      reset(opts = {}, initial = false) {
+        // Profundidad (z de 0.25 lejano a 1.35 cercano)
+        this.depth = opts.depth || (this.isPersistentWish ? 1.18 : (0.28 + Math.random() * 0.98));
+        this.x = opts.x !== undefined ? opts.x : Math.random() * W;
+        this.y = opts.y !== undefined
+          ? opts.y
+          : (initial ? Math.random() * (horizonY * 0.96) : horizonY + 25 + Math.random() * 40);
+
+        this.vy = -(0.22 + this.depth * 0.38);
+        this.vxDrift = (Math.random() - 0.5) * 0.22 * this.depth;
+        this.swayAmp = (0.18 + Math.random() * 0.35) * this.depth;
+        this.swaySpeed = 0.007 + Math.random() * 0.012;
+        this.phase = Math.random() * Math.PI * 2;
+        this.flickerPhase = Math.random() * Math.PI * 2;
+        this.alpha = opts.y !== undefined ? 0.2 : 1;
+      }
+
+      update(t) {
+        if (this.alpha < 1) {
+          this.alpha = Math.min(1, this.alpha + 0.022);
+        }
+
+        if (this.isPersistentWish && this.targetY !== null) {
+          // Sube suavemente hasta su altura elegida en lo alto del cielo y flota allí
+          if (this.y > this.targetY) {
+            this.y += (this.targetY - this.y) * 0.018 - 0.35;
+          } else {
+            this.y = this.targetY + Math.sin(t * 0.02 + this.phase) * 7;
+          }
+          this.x += Math.sin(t * 0.012 + this.phase) * 0.28;
+        } else {
+          this.y += this.vy;
+          this.x += this.vxDrift + Math.sin(t * this.swaySpeed + this.phase) * this.swayAmp;
+
+          if (this.y < -85) {
+            this.reset({}, false);
+          }
+        }
+
+        if (this.x < -60) this.x = W + 60;
+        if (this.x > W + 60) this.x = -60;
+
+        // Chispas ascendentes cálidas alrededor de la linterna
+        const sparkChance = this.isPersistentWish ? 0.35 : (0.04 + this.depth * 0.08);
+        if (Math.random() < sparkChance) {
+          embers.push({
+            x: this.x + (Math.random() - 0.5) * 18 * this.depth,
+            y: this.y + (Math.random() - 0.3) * 14 * this.depth,
+            vx: (Math.random() - 0.5) * 0.45,
+            vy: -(0.35 + Math.random() * 0.55),
+            r: (0.8 + Math.random() * 1.5) * Math.min(1.1, this.depth),
+            life: 1,
+            decay: 0.012 + Math.random() * 0.016
+          });
+        }
+      }
+
+      draw(ctx, t, isWaterReflection = false) {
+        const flicker = 0.93 + Math.sin(t * 0.09 + this.flickerPhase) * 0.07;
+        const w = 24 * this.depth;
+        const h = 33 * this.depth;
+        const finalAlpha = this.alpha * (isWaterReflection ? 0.22 * this.depth : (0.45 + this.depth * 0.55));
+
+        if (finalAlpha <= 0.01) return;
+
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        if (isWaterReflection) {
+          ctx.scale(1.18, -0.72);
+        }
+        ctx.globalAlpha = Math.min(1, finalAlpha);
+
+        // 1. Halo difuso multicapa
+        const haloR = (this.isPersistentWish ? 68 : 44) * this.depth * flicker;
+        const halo = ctx.createRadialGradient(0, 0, 2 * this.depth, 0, 0, haloR);
+        if (this.isPersistentWish) {
+          halo.addColorStop(0, 'rgba(255, 245, 190, 0.85)');
+          halo.addColorStop(0.38, 'rgba(255, 190, 80, 0.38)');
+          halo.addColorStop(0.75, 'rgba(255, 130, 35, 0.12)');
+          halo.addColorStop(1, 'rgba(255, 120, 20, 0)');
+        } else {
+          halo.addColorStop(0, 'rgba(255, 215, 120, 0.58)');
+          halo.addColorStop(0.48, 'rgba(255, 150, 45, 0.2)');
+          halo.addColorStop(1, 'rgba(255, 120, 20, 0)');
+        }
+        ctx.fillStyle = halo;
+        ctx.beginPath();
+        ctx.arc(0, 0, haloR, 0, Math.PI * 2);
+        ctx.fill();
+
+        // 2. Silueta de la linterna de papel
+        const topW = w * 0.64;
+        const botW = w * 0.42;
+        const halfH = h * 0.5;
+
+        const paperGrad = ctx.createRadialGradient(0, halfH * 0.22, 1, 0, 0, h * 0.78);
+        paperGrad.addColorStop(0, '#fffdf0');
+        paperGrad.addColorStop(0.35, '#ffd770');
+        paperGrad.addColorStop(0.75, '#f59227');
+        paperGrad.addColorStop(1, '#b84a0e');
+
+        ctx.fillStyle = paperGrad;
+        ctx.beginPath();
+        ctx.moveTo(-topW, -halfH);
+        ctx.quadraticCurveTo(0, -halfH - 4.5 * this.depth, topW, -halfH);
+        ctx.quadraticCurveTo(w * 0.68, 0, botW, halfH);
+        ctx.lineTo(-botW, halfH);
+        ctx.quadraticCurveTo(-w * 0.68, 0, -topW, -halfH);
+        ctx.closePath();
+        ctx.fill();
+
+        // 3. Textura de costillas verticales y aros del papel
+        if (!isWaterReflection && this.depth > 0.52) {
+          ctx.strokeStyle = 'rgba(130, 48, 8, 0.28)';
+          ctx.lineWidth = Math.max(0.7, 0.9 * this.depth);
+
+          // Costilla central y laterales curvas
+          ctx.beginPath();
+          ctx.moveTo(0, -halfH - 2 * this.depth);
+          ctx.lineTo(0, halfH);
+          ctx.moveTo(-topW * 0.5, -halfH);
+          ctx.quadraticCurveTo(-w * 0.34, 0, -botW * 0.5, halfH);
+          ctx.moveTo(topW * 0.5, -halfH);
+          ctx.quadraticCurveTo(w * 0.34, 0, botW * 0.5, halfH);
+          ctx.stroke();
+
+          // Aro superior e inferior de bambú
+          ctx.strokeStyle = 'rgba(95, 35, 5, 0.45)';
+          ctx.beginPath();
+          ctx.moveTo(-botW, halfH);
+          ctx.lineTo(botW, halfH);
+          ctx.stroke();
+        }
+
+        // 4. Núcleo incandescente de la llama interior
+        const flameGrad = ctx.createRadialGradient(0, halfH * 0.28, 0.5, 0, halfH * 0.15, w * 0.5);
+        flameGrad.addColorStop(0, 'rgba(255, 255, 250, 0.96)');
+        flameGrad.addColorStop(1, 'rgba(255, 210, 95, 0)');
+        ctx.fillStyle = flameGrad;
+        ctx.beginPath();
+        ctx.arc(0, halfH * 0.2, w * 0.48, 0, Math.PI * 2);
+        ctx.fill();
+
+        // 5. Etiqueta luminosa si es un deseo especial pedido por Luz Paola
+        if (!isWaterReflection && this.isPersistentWish && this.wishText) {
+          ctx.save();
+          ctx.font = 'italic 14px "Lora", Georgia, serif';
+          const textWidth = ctx.measureText(`✦ ${this.wishText}`).width;
+          const padX = 12;
+          const boxW = textWidth + padX * 2;
+          const boxH = 24;
+          const boxY = -halfH - 32;
+
+          ctx.fillStyle = 'rgba(12, 10, 32, 0.72)';
+          ctx.strokeStyle = 'rgba(255, 224, 138, 0.55)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.roundRect(-boxW / 2, boxY, boxW, boxH, 12);
+          ctx.fill();
+          ctx.stroke();
+
+          ctx.fillStyle = '#fff3cf';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(`✦ ${this.wishText}`, 0, boxY + boxH / 2);
+          ctx.restore();
+        }
+
+        ctx.restore();
+      }
+    }
+
+    function initAmbientLanterns() {
+      ambientLanterns = [];
+      const total = Math.min(54, Math.max(30, Math.floor(W / 24)));
+      for (let i = 0; i < total; i++) {
+        ambientLanterns.push(new PaperLantern({}));
+      }
+    }
+
+    /**
+     * Dibuja cielo con nebulosas suaves (índigo, violeta y dorado cálido),
+     * estrellas con destellos, montañas en capas con niebla y lago reflejante.
+     */
+    function renderSkyMountainsAndLake(t) {
+      // 1. Degradado base del cielo nocturno
+      const skyBase = ctx.createLinearGradient(0, 0, 0, horizonY);
+      skyBase.addColorStop(0, '#040612');
+      skyBase.addColorStop(0.38, '#100e2e');
+      skyBase.addColorStop(0.76, '#231645');
+      skyBase.addColorStop(1, '#362157');
+      ctx.fillStyle = skyBase;
+      ctx.fillRect(0, 0, W, horizonY);
+
+      // 2. Nebulosas suaves en tonos índigo, violeta y dorado cálido
+      const neb1 = ctx.createRadialGradient(W * 0.25, horizonY * 0.34, 10, W * 0.25, horizonY * 0.34, W * 0.45);
+      neb1.addColorStop(0, 'rgba(88, 52, 158, 0.22)');
+      neb1.addColorStop(0.55, 'rgba(42, 32, 105, 0.12)');
+      neb1.addColorStop(1, 'rgba(10, 10, 30, 0)');
+      ctx.fillStyle = neb1;
+      ctx.fillRect(0, 0, W, horizonY);
+
+      const neb2 = ctx.createRadialGradient(W * 0.76, horizonY * 0.42, 10, W * 0.76, horizonY * 0.42, W * 0.42);
+      neb2.addColorStop(0, 'rgba(120, 62, 145, 0.18)');
+      neb2.addColorStop(0.6, 'rgba(35, 28, 88, 0.1)');
+      neb2.addColorStop(1, 'rgba(10, 10, 30, 0)');
+      ctx.fillStyle = neb2;
+      ctx.fillRect(0, 0, W, horizonY);
+
+      // Resplandor dorado cálido sobre el horizonte
+      const warmNebula = ctx.createRadialGradient(W * 0.5, horizonY * 0.92, 15, W * 0.5, horizonY * 0.92, W * 0.62);
+      warmNebula.addColorStop(0, 'rgba(255, 185, 80, 0.28)');
+      warmNebula.addColorStop(0.45, 'rgba(215, 120, 65, 0.11)');
+      warmNebula.addColorStop(1, 'rgba(20, 15, 45, 0)');
+      ctx.fillStyle = warmNebula;
+      ctx.fillRect(0, horizonY * 0.2, W, horizonY * 0.8);
+
+      // 3. Estrellas con destellos
+      for (const s of stars) {
+        const twinkle = 0.62 + 0.38 * Math.sin(t * s.speed + s.phase);
+        const alpha = s.baseAlpha * twinkle;
+        ctx.fillStyle = `rgba(255, 249, 230, ${alpha})`;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (s.hasCrossFlare && twinkle > 0.85) {
+          const flareLen = s.radius * 4.5;
+          ctx.strokeStyle = `rgba(255, 240, 195, ${alpha * 0.65})`;
+          ctx.lineWidth = 0.8;
+          ctx.beginPath();
+          ctx.moveTo(s.x - flareLen, s.y);
+          ctx.lineTo(s.x + flareLen, s.y);
+          ctx.moveTo(s.x, s.y - flareLen);
+          ctx.lineTo(s.x, s.y + flareLen);
+          ctx.stroke();
+        }
+      }
+
+      // 4. Estrellas fugaces suaves
+      if (Math.random() < 0.0045 && shootingStars.length < 2) {
+        shootingStars.push({
+          x: W * (0.15 + Math.random() * 0.7),
+          y: horizonY * (0.08 + Math.random() * 0.28),
+          vx: (Math.random() > 0.5 ? 1 : -1) * (4.2 + Math.random() * 2.8),
+          vy: 1.8 + Math.random() * 1.6,
+          life: 1
+        });
+      }
+
+      for (let i = shootingStars.length - 1; i >= 0; i--) {
+        const st = shootingStars[i];
+        st.x += st.vx;
+        st.y += st.vy;
+        st.life -= 0.024;
+        if (st.life <= 0) {
+          shootingStars.splice(i, 1);
+          continue;
+        }
+        const tail = ctx.createLinearGradient(st.x, st.y, st.x - st.vx * 14, st.y - st.vy * 14);
+        tail.addColorStop(0, `rgba(255, 246, 210, ${st.life})`);
+        tail.addColorStop(1, 'rgba(255, 246, 210, 0)');
+        ctx.strokeStyle = tail;
+        ctx.lineWidth = 1.6;
+        ctx.beginPath();
+        ctx.moveTo(st.x, st.y);
+        ctx.lineTo(st.x - st.vx * 14, st.y - st.vy * 14);
+        ctx.stroke();
+      }
+
+      // 5. Montañas en capas con niebla suave
+      // Capa lejana (violeta grisáceo con bruma)
+      ctx.fillStyle = '#161336';
+      ctx.beginPath();
+      ctx.moveTo(0, horizonY);
+      ctx.lineTo(0, horizonY - 34);
+      ctx.quadraticCurveTo(W * 0.16, horizonY - 68, W * 0.34, horizonY - 28);
+      ctx.quadraticCurveTo(W * 0.55, horizonY - 76, W * 0.78, horizonY - 26);
+      ctx.quadraticCurveTo(W * 0.9, horizonY - 52, W, horizonY - 30);
+      ctx.lineTo(W, horizonY);
+      ctx.closePath();
+      ctx.fill();
+
+      // Franja de niebla suave entre montañas
+      const mist1 = ctx.createLinearGradient(0, horizonY - 45, 0, horizonY);
+      mist1.addColorStop(0, 'rgba(255, 200, 130, 0)');
+      mist1.addColorStop(1, 'rgba(255, 195, 120, 0.14)');
+      ctx.fillStyle = mist1;
+      ctx.fillRect(0, horizonY - 45, W, 45);
+
+      // Capa cercana (silueta oscura profunda)
+      ctx.fillStyle = '#08091a';
+      ctx.beginPath();
+      ctx.moveTo(0, horizonY);
+      ctx.lineTo(0, horizonY - 18);
+      ctx.quadraticCurveTo(W * 0.22, horizonY - 42, W * 0.45, horizonY - 12);
+      ctx.quadraticCurveTo(W * 0.7, horizonY - 44, W, horizonY - 15);
+      ctx.lineTo(W, horizonY);
+      ctx.closePath();
+      ctx.fill();
+
+      // Niebla luminosa rasante sobre la línea del agua
+      const horizonMist = ctx.createLinearGradient(0, horizonY - 14, 0, horizonY + 14);
+      horizonMist.addColorStop(0, 'rgba(255, 205, 120, 0)');
+      horizonMist.addColorStop(0.5, 'rgba(255, 205, 120, 0.16)');
+      horizonMist.addColorStop(1, 'rgba(255, 205, 120, 0)');
+      ctx.fillStyle = horizonMist;
+      ctx.fillRect(0, horizonY - 14, W, 28);
+
+      // 6. Lago tranquilo con reflejos dorados ondulados
+      const lakeGrad = ctx.createLinearGradient(0, horizonY, 0, H);
+      lakeGrad.addColorStop(0, '#19143a');
+      lakeGrad.addColorStop(0.32, '#0d0c26');
+      lakeGrad.addColorStop(1, '#040511');
+      ctx.fillStyle = lakeGrad;
+      ctx.fillRect(0, horizonY, W, H - horizonY);
+
+      // Columna de reflejo dorado central en el lago
+      const lakeRadiance = ctx.createRadialGradient(W * 0.5, horizonY + 12, 8, W * 0.5, horizonY + 65, W * 0.52);
+      lakeRadiance.addColorStop(0, 'rgba(255, 195, 90, 0.28)');
+      lakeRadiance.addColorStop(0.55, 'rgba(255, 145, 45, 0.09)');
+      lakeRadiance.addColorStop(1, 'rgba(8, 9, 26, 0)');
+      ctx.fillStyle = lakeRadiance;
+      ctx.fillRect(0, horizonY, W, H - horizonY);
+
+      // Ondas doradas horizontales animadas
+      for (let i = 0; i < 18; i++) {
+        const ratio = i / 18;
+        const wy = horizonY + 8 + ratio * (H - horizonY - 12);
+        const waveOffset = Math.sin(t * 0.024 + i * 0.9) * (10 + ratio * 16);
+        const span = (45 + ratio * 155) * (W / 850);
+        const alpha = (0.14 - ratio * 0.08) * (0.75 + 0.25 * Math.sin(t * 0.03 + i));
+
+        ctx.strokeStyle = `rgba(255, 215, 130, ${Math.max(0.02, alpha)})`;
+        ctx.lineWidth = 1 + ratio * 0.7;
+        ctx.beginPath();
+        ctx.moveTo(W * 0.5 - span + waveOffset, wy);
+        ctx.lineTo(W * 0.5 + span + waveOffset, wy);
+        ctx.stroke();
+      }
+    }
+
+    /**
+     * Dibuja la barca iluminada con farolillos y siluetas románticas de Eduardo y Luz Paola
+     */
+    function renderIlluminatedBoat(t) {
+      const bx = W * 0.5 + Math.sin(t * 0.011) * 9;
+      const by = horizonY + (H - horizonY) * 0.45 + Math.cos(t * 0.017) * 2.5;
+      const sc = Math.min(1.2, Math.max(0.78, W / 880));
+
+      ctx.save();
+      ctx.translate(bx, by);
+      ctx.scale(sc, sc);
+
+      // Sombra y reflejo cálido de la barca en el agua
+      ctx.fillStyle = 'rgba(3, 4, 14, 0.62)';
+      ctx.beginPath();
+      ctx.ellipse(0, 14, 72, 8, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      const boatWaterGlow = ctx.createRadialGradient(0, 16, 4, 0, 18, 78);
+      boatWaterGlow.addColorStop(0, 'rgba(255, 195, 90, 0.26)');
+      boatWaterGlow.addColorStop(1, 'rgba(255, 150, 40, 0)');
+      ctx.fillStyle = boatWaterGlow;
+      ctx.beginPath();
+      ctx.ellipse(0, 18, 78, 14, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Ondas concéntricas suaves alrededor del casco
+      ctx.strokeStyle = 'rgba(255, 220, 145, 0.18)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.ellipse(0, 11, 80 + Math.sin(t * 0.03) * 5, 7, 0, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Casco estilizado de la barca
+      ctx.fillStyle = '#070715';
+      ctx.strokeStyle = 'rgba(255, 200, 105, 0.36)';
+      ctx.lineWidth = 1.3;
+      ctx.beginPath();
+      ctx.moveTo(-70, -3);
+      ctx.quadraticCurveTo(-54, 16, 0, 16);
+      ctx.quadraticCurveTo(54, 16, 70, -3);
+      ctx.quadraticCurveTo(0, 3, -70, -3);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // Silueta de Eduardo (izquierda) mirando hacia las linternas
+      ctx.fillStyle = '#070715';
+      ctx.beginPath();
+      ctx.arc(-18, -20, 5.4, 0, Math.PI * 2);
+      ctx.moveTo(-28, 0);
+      ctx.quadraticCurveTo(-26, -13, -18, -13);
+      ctx.quadraticCurveTo(-10, -13, -9, 0);
+      ctx.fill();
+
+      // Silueta de Luz Paola (derecha) con cabello largo suave
+      ctx.beginPath();
+      ctx.arc(17, -19, 5.1, 0, Math.PI * 2);
+      ctx.moveTo(8, 0);
+      ctx.quadraticCurveTo(10, -12, 17, -12);
+      ctx.quadraticCurveTo(25, -12, 27, 0);
+      ctx.fill();
+
+      // Farolillo de proa (izquierda) y farolillo central iluminando la barca
+      const lanternsOnBoat = [
+        { lx: -64, ly: -12, r: 18 },
+        { lx: 0, ly: -9, r: 26 },
+        { lx: 64, ly: -12, r: 18 }
+      ];
+
+      for (const fl of lanternsOnBoat) {
+        const g = ctx.createRadialGradient(fl.lx, fl.ly, 1, fl.lx, fl.ly, fl.r);
+        g.addColorStop(0, 'rgba(255, 244, 180, 0.95)');
+        g.addColorStop(0.45, 'rgba(255, 175, 60, 0.38)');
+        g.addColorStop(1, 'rgba(255, 140, 30, 0)');
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(fl.lx, fl.ly, fl.r, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = '#ffe596';
+        ctx.fillRect(fl.lx - 3, fl.ly - 4.5, 6, 9);
+      }
+
+      // Postes finos de los farolillos de proa y popa
+      ctx.strokeStyle = 'rgba(255, 205, 115, 0.45)';
+      ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.moveTo(-66, -2);
+      ctx.lineTo(-64, -16);
+      ctx.moveTo(66, -2);
+      ctx.lineTo(64, -16);
+      ctx.stroke();
+
+      ctx.restore();
+    }
+
+    function renderEmbers() {
+      for (let i = embers.length - 1; i >= 0; i--) {
+        const e = embers[i];
+        e.x += e.vx;
+        e.y += e.vy;
+        e.life -= e.decay;
+        if (e.life <= 0) {
+          embers.splice(i, 1);
+          continue;
+        }
+        ctx.fillStyle = `rgba(255, 235, 160, ${e.life})`;
+        ctx.beginPath();
+        ctx.arc(e.x, e.y, e.r * e.life, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    let frameCounter = 0;
+    function animationLoop() {
+      frameCounter++;
+      renderSkyMountainsAndLake(frameCounter);
+
+      // Ordenar linternas ambientales por profundidad (las lejanas detrás)
+      ambientLanterns.sort((a, b) => a.depth - b.depth);
+
+      // Reflejos en el agua de las linternas cercanas al horizonte
+      for (const l of ambientLanterns) {
+        l.update(frameCounter);
+        if (l.y > horizonY * 0.25 && l.y < horizonY + 12) {
+          const dist = horizonY - l.y;
+          const savedY = l.y;
+          l.y = horizonY + dist * 0.42 + 6;
+          l.draw(ctx, frameCounter, true);
+          l.y = savedY;
+        }
+      }
+
+      // Barca iluminada en el lago
+      renderIlluminatedBoat(frameCounter);
+
+      // Dibujar linternas ambientales en el cielo
+      for (const l of ambientLanterns) {
+        l.draw(ctx, frameCounter, false);
+      }
+
+      // Dibujar linternas de deseos especiales que permanecen visibles en lo alto
+      for (const wl of persistentWishLanterns) {
+        wl.update(frameCounter);
+        wl.draw(ctx, frameCounter, false);
+      }
+
+      renderEmbers();
+      requestAnimationFrame(animationLoop);
+    }
+
+    /**
+     * =========================================================================
+     * INTERACTIVIDAD: SOLTAR LINTERNAS, MENSAJES POÉTICOS Y DESEOS PERMANENTES
+     * =========================================================================
+     */
+    const poemLayer = document.getElementById('poemLayer');
+
+    function spawnPoeticToast(x, y, overrideText = null) {
+      const msg = overrideText || POETIC_PHRASES[phrasePointer % POETIC_PHRASES.length];
+      if (!overrideText) phrasePointer++;
+
+      const el = document.createElement('div');
+      el.className = 'poem-bubble velvet-glass px-4 py-2 rounded-full text-amber-100 text-xs sm:text-sm italic text-center max-w-[270px] sm:max-w-xs';
+
+      const clampedX = Math.min(Math.max(x, 145), W - 145);
+      const clampedY = Math.min(Math.max(y - 34, 110), H - 135);
+
+      el.style.left = `${clampedX}px`;
+      el.style.top = `${clampedY}px`;
+      el.textContent = msg;
+
+      poemLayer.appendChild(el);
+      setTimeout(() => {
+        if (el.parentNode) el.parentNode.removeChild(el);
+      }, 4600);
+    }
+
+    function launchLanternAt(x, y) {
+      const lx = x !== undefined ? x : W * (0.32 + Math.random() * 0.36);
+      const ly = y !== undefined ? y : horizonY - 8;
+
+      const newLantern = new PaperLantern({
+        x: lx,
+        y: ly,
+        depth: 1.12
+      });
+      ambientLanterns.push(newLantern);
+
+      if (ambientLanterns.length > 82) {
+        ambientLanterns.shift();
+      }
+
+      // Destello radial de chispas doradas
+      for (let i = 0; i < 18; i++) {
+        const ang = (Math.PI * 2 * i) / 18;
+        embers.push({
+          x: lx,
+          y: ly,
+          vx: Math.cos(ang) * (0.65 + Math.random() * 0.85),
+          vy: Math.sin(ang) * (0.65 + Math.random() * 0.85),
+          r: 2.1,
+          life: 1,
+          decay: 0.02
+        });
+      }
+
+      music.playSparkleChime();
+      spawnPoeticToast(lx, ly);
+    }
+
+    // Tocar cualquier parte del cielo suelta una linterna
+    canvas.addEventListener('pointerdown', (e) => {
+      launchLanternAt(e.clientX, e.clientY);
+    });
+
+    // Botón inferior "Soltar linterna"
+    document.getElementById('releaseBtn').addEventListener('click', () => {
+      launchLanternAt();
+    });
+
+    /**
+     * =========================================================================
+     * MODALES: COFRE DE LUZ Y PEDIR UN DESEO PERMANENTE
+     * =========================================================================
+     */
+    const chestModal = document.getElementById('chestModal');
+    document.getElementById('chestBtn').addEventListener('click', () => {
+      chestModal.classList.add('open');
+      music.playSparkleChime();
+    });
+    document.getElementById('closeChestBtn').addEventListener('click', () => {
+      chestModal.classList.remove('open');
+    });
+    chestModal.addEventListener('click', (e) => {
+      if (e.target === chestModal) chestModal.classList.remove('open');
+    });
+
+    const wishModal = document.getElementById('wishModal');
+    const wishTextarea = document.getElementById('wishTextarea');
+    document.getElementById('wishModalBtn').addEventListener('click', () => {
+      wishModal.classList.add('open');
+      setTimeout(() => wishTextarea.focus(), 140);
+    });
+    document.getElementById('closeWishModalBtn').addEventListener('click', () => {
+      wishModal.classList.remove('open');
+    });
+    wishModal.addEventListener('click', (e) => {
+      if (e.target === wishModal) wishModal.classList.remove('open');
+    });
+
+    // Al enviar un deseo, se crea una linterna especial que sube y permanece visible en lo alto del cielo
+    document.getElementById('wishForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = wishTextarea.value.trim();
+      if (!text) return;
+
+      wishTextarea.value = '';
+      wishModal.classList.remove('open');
+
+      // Distribuir horizontalmente los deseos pedidos para que no se encimen
+      const slotIndex = persistentWishLanterns.length;
+      const xPositions = [0.5, 0.28, 0.72, 0.38, 0.62];
+      const targetX = W * xPositions[slotIndex % xPositions.length];
+      const targetY = H * (0.24 + (slotIndex % 3) * 0.08);
+
+      const specialLantern = new PaperLantern({
+        x: W * 0.5,
+        y: horizonY - 10,
+        depth: 1.24,
+        isPersistentWish: true,
+        wishText: text,
+        targetY: targetY
+      });
+      // Ajustar deriva suave hacia su posición asignada en lo alto
+      specialLantern.x = targetX;
+
+      persistentWishLanterns.push(specialLantern);
+      if (persistentWishLanterns.length > 5) {
+        persistentWishLanterns.shift();
+      }
+
+      music.playSparkleChime();
+      spawnPoeticToast(W * 0.5, horizonY - 40, `Tu deseo ya brilla en lo alto del cielo, Luz Paola ✨`);
+    });
+
+    /**
+     * =========================================================================
+     * CONTROL DE MELODÍA INSTRUMENTAL
+     * =========================================================================
+     */
+    const melodyBtn = document.getElementById('melodyBtn');
+    const melodyIcon = document.getElementById('melodyIcon');
+    const melodyText = document.getElementById('melodyText');
+
+    melodyBtn.addEventListener('click', () => {
+      const active = music.toggle();
+      if (active) {
+        melodyIcon.textContent = '✨';
+        melodyText.textContent = 'Sonando';
+        melodyBtn.classList.add('ring-2', 'ring-amber-300/60');
+      } else {
+        melodyIcon.textContent = '🎶';
+        melodyText.textContent = 'Melodía';
+        melodyBtn.classList.remove('ring-2', 'ring-amber-300/60');
+      }
+    });
+
+    /**
+     * =========================================================================
+     * ARRANQUE DE LA ESCENA
+     * =========================================================================
+     */
+    window.addEventListener('resize', resizeScene);
+
+    window.onload = function () {
+      resizeScene();
+      initAmbientLanterns();
+      animationLoop();
+    };
+  </script>
+</body>
+</html>
